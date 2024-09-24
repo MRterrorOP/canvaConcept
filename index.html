@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas Animation with Overlay Elements</title>
+
+    <style>
+      body {
+        background-image: linear-gradient(to down, blue, black);
+      }
+      html {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      p {
+        color: black;
+      }
+      h1 {
+        color: black;
+      }
+      #backgroundCanvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        
+      }
+
+      #overlay {
+        position: relative;
+        z-index: 2;
+        color: white;
+        text-align: center;
+        margin-top: 20%;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="backgroundCanvas"></canvas>
+    <div id="overlay">
+      <h1>Overlay Element</h1>
+      <p>This is some text on top of the animation.</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+  <script src="canvas.js"></script>
+</html>
